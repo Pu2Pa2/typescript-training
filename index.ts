@@ -1,10 +1,19 @@
-class Something {
-    static instances = 0;
-    constructor() {
-        Something.instances++;
-    }
+class FooBase {
+    public x: number;
+    private y: number;
+    protected z: number;
 }
 
-const s1 = new Something();
-const s2 = new Something();
-console.log(Something.instances)
+const foo = new FooBase();
+foo.x;
+foo.y;
+foo.z;
+
+class FooChild extends FooBase {
+    constructor() {
+        super();
+        this.x;
+        this.y;
+        thix.z;
+    }
+}
