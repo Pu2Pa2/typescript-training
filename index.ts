@@ -1,7 +1,14 @@
-abstract class FooCommand {}
+abstract class FooCommand {
+    abstract execute(): string;
+}
 
-class BarCommand extends FooCommand {}
+// class BarErrorCommand extends FooCommand{}
 
-const fooCommand = new FooCommand();
+class BarCommand extends FooCommand {
+    execute() {
+        return `Command Bar executed`;
+    }
+}
 
 const barCommand = new BarCommand();
+console.log(barCommand.execute());
