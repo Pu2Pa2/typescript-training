@@ -1,19 +1,7 @@
-class FooBase {
-    public x: number;
-    private y: number;
-    protected z: number;
-}
+abstract class FooCommand {}
 
-const foo = new FooBase();
-foo.x;
-foo.y;
-foo.z;
+class BarCommand extends FooCommand {}
 
-class FooChild extends FooBase {
-    constructor() {
-        super();
-        this.x;
-        this.y;
-        thix.z;
-    }
-}
+const fooCommand = new FooCommand();
+
+const barCommand = new BarCommand();
