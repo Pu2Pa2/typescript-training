@@ -15,26 +15,26 @@ class Component {
 
 class Frame implements Iterable<Component> {
 
-constructor(public name: string, public components: Component[]) {}
+    constructor(public name: string, public components: Component[]) {}
 
     [Symbol.iterator]() {
         let pointer = 0;
         let components = this.components;
 
         return {
-        next(): IteratorResult<Component> {
-            if (pointer < components.length) {
-                return {
-                    done: false,
-                    value: components[pointer++]
-                }
-            } else {
-                return {
-                    done: true,
-                    value: null
+            next(): IteratorResult<Component> {
+                if (pointer < components.length) {
+                    return {
+                        done: false,
+                        value: components[pointer++]
+                    }
+                } else {
+                    return {
+                        done: true,
+                        value: null
+                    }
                 }
             }
-        }
         }
     }
 }
