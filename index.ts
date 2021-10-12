@@ -1,14 +1,6 @@
-abstract class FooCommand {
-    abstract execute(): string;
-}
-
-// class BarErrorCommand extends FooCommand{}
-
-class BarCommand extends FooCommand {
-    execute() {
-        return `Command Bar executed`;
+class Foo {
+    members: number[] = [];
+    add(x: number) {
+        this.members.push(x)
     }
 }
-
-const barCommand = new BarCommand();
-console.log(barCommand.execute());
