@@ -1,18 +1,17 @@
-let myname:  {
-    first: string;
-    second: string;
+function reverse<T>(items: T[]): T[] {
+    const toreturn = [];
+    for (let i = items.length - 1; i >= 0; i--) {
+        toreturn.push(items[i]);
+    }
+    return toreturn;
 }
 
-myname = {
-    first: 'John',
-    second: 'Doe'
-};
+const sample = [1, 2, 3];
+let reversed = reverse(sample);
+console.log(reversed);
 
-myname = {
-    first: 'John'
-};
+reversed[0] = '1';
+reversed = ['1', '2']
 
-myname = {
-    first: 'JOhn',
-    second: 1337
-}
+reversed[0] = 1;
+reversed = [1, 2]
