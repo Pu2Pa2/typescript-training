@@ -1,8 +1,8 @@
-function formatCommandline(command: string[] | string) {
-    let line = '';
-    if (typeof command === 'string') {
-        line = command.trim();
-    } else {
-        line = command.join(' ').trim();
-    }
+function extend<T, U>(first: T, second: U): T & U {
+    return {...first, ...second};
 }
+
+const x = extend({a: 'hello'}, {b: 42});
+
+const a = x.a;
+const b = x.b;
