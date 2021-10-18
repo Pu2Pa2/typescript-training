@@ -1,18 +1,10 @@
-interface hoge {
-    aaa: number
-    bbb: number
-}
-const hogeVar: hoge = {
-    aaa: 123,
-    bbb: 456
-}
-console.log(hogeVar)
-
-interface hoge {
-    ccc: number
+enum Color {
+    Red,
+    Green,
+    Blue,
 }
 
-const hogeVar2: hoge = {
-    ccc: 789
-}
-console.log(hogeVar2)
+let color = Color.Red
+console.log(color)
+color = 0
+console.log(color)
